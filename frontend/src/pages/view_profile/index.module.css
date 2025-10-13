@@ -1,0 +1,147 @@
+.container{
+    padding: 1.3rem;
+    background:rgb(255, 253, 253) ;
+    display: flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+
+.backDropContainer{
+    width: 100%;
+    height: 30vh;
+    background: url("https://png.pngtree.com/thumb_back/fh260/background/20250205/pngtree-soft-pastel-floral-design-light-blue-background-image_16896113.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 20px;
+
+}
+
+.backDrop{
+    border-radius: 50%;
+}
+
+.backDropContainer img {
+    width: 10em;
+    height: 10em;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30%;
+    left: 8%;
+    text-align: center;
+    
+
+}
+
+.profileContainer_details{
+    padding-top: 6.6rem;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.card_profileContainer{
+    display: flex;
+}
+
+.card_profileContainer > img {
+    width: 3.4rem;
+    height: auto;
+    height: 3.4rem;
+    object-fit: cover;
+    display: flex;
+}
+
+.connecteBtn{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    background: rgba(3,93,183,0.905);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.connectedButton{
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+    border: 1px solid rgb(243, 242, 241);
+    outline: none;
+    color: rgba(3,93,183,0.905);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.workHistoryContainer{
+    display: flex;
+    gap: 1.4rem;
+    padding-top:1.4rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.wrokHistoryCard{
+    min-width: fit-content;
+    width: 50px;
+    padding-inline: 2.5rem;
+    padding-block: 1rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgb(173,173,173);
+}
+
+.profileContainer_flex{
+    display: flex;
+    gap: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0.7rem;
+        gap: 0.7rem;
+    }
+
+    .backDropContainer {
+        height: 18vh;
+        border-radius: 12px;
+    }
+
+    .backDropContainer img {
+        width: 6em;
+        height: 6em;
+        left: 4%;
+        bottom: -35%;
+    }
+
+    .profileContainer_details {
+       flex-direction: column;
+    }
+
+    .card {
+        gap: 0.7rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card_profileContainer > img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .workHistoryContainer {
+        gap: 0.7rem;
+        padding-top: 0.7rem;
+    }
+
+    .wrokHistoryCard {
+        padding-inline: 1rem;
+        padding-block: 0.5rem;
+        box-shadow: 5px 5px 8px rgb(173,173,173);
+    }
+}
+    
