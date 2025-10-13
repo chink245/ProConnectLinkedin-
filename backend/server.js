@@ -20,6 +20,8 @@ app.use(express.static("uploads"));
 const start = async () => {
     const connected = await mongoose.connect("mongodb+srv://chinkyrao06:TIQiXiSydd4Ne87T@cluster0.pilzf6r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
+    console.log("🔥 MongoDB Connected:", connected.connection.host);
+
     app.listen(9090, () => {
         console.log("Server is runnig on port 9090")
     })
