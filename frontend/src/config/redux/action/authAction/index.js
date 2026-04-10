@@ -14,7 +14,7 @@ export const loginUser = createAsyncThunk(
             if(response.data.token){
              localStorage.setItem("token",response.data.token);
         }  else{
-            return thunkAPI.rejectWithValue({message:"token nt provided"});
+            return thunkAPI.rejectWithValue({message:"token not provided"});
         }
             return thunkAPI.fulfillWithValue(response.data);
             
@@ -52,7 +52,11 @@ export const loginUser = createAsyncThunk(
                 })
                 return thunkAPI.fulfillWithValue(response.data);
                 }catch(err){
-                    return thunkAPI.rejectWithValue(err.response.data)
+                    if (err.response?.status === 404 || err.response?.status === 401) {
+                           localStorage.removeItem("token");
+                            window.location.href = "/login";
+                      }
+                    return thunkAPI.rejectWithValue(err.response.data) 
                 }
             }
         )

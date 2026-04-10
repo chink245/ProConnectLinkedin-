@@ -5,7 +5,7 @@ import { getAllUsers } from "../../action/authAction";
 
 
 const initialState = {
-  user: undefined,
+  user: null,
   isError: false,
   isSucess: false,
   isLoading: false,

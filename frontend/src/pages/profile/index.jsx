@@ -41,19 +41,28 @@ export default function ProfilePage(){
     }
 
 
-    useEffect(()=>{
-        dispatch(getAboutUser({token: localStorage.getItem("token")}))
-        dispatch(getAllPosts())
-    },[])
+    // useEffect(()=>{
+    //     dispatch(getAboutUser({token: localStorage.getItem("token")}))
+    //     dispatch(getAllPosts())
+    // },[])
+
+
+  useEffect(() => {
+  const token = localStorage.getItem("token");
+  console.log("TOKEN:", token);
+
+  dispatch(getAboutUser({ token }));
+  dispatch(getAllPosts());
+}, []);
 
 
     useEffect(()=>{
      
-     if (authState.user != undefined) {
+     if (authState?.user) {
         setUserProfile(authState.user)
-            let post = postReducer.posts.filter((post) => {
-            post.userId.username === authState.user.userId.username;
-          })
+           let post = postReducer.posts.filter(
+  (post) => post.userId.username === authState.user.userId.username
+);
           setUserPosts(post);
         }
     },[authState.user,postReducer.posts])
@@ -69,7 +78,7 @@ export default function ProfilePage(){
                 'Content-Type':'multipart/form-data',
             },
         });
-
+       
         dispatch(getAboutUser({token:localStorage.getItem('token')}));
     }
 
@@ -88,6 +97,7 @@ export default function ProfilePage(){
       });
 
       dispatch(getAboutUser({token: localStorage.getItem("token")}))
+     
 
     }
     

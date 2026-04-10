@@ -45,16 +45,16 @@ export default function Dashboard() {
 
 useEffect(()=>{
 
- if(authState.isTokenThere){
+ if(authState?.isTokenThere){
     dispatch(getAllPosts());
     dispatch(getAboutUser({token:localStorage.getItem("token")}))
  }
-  if(!authState.all_profiles_fetched){
+  if(!authState?.all_profiles_fetched){
     console.log("authState.user", authState.user);
 
          dispatch(getAllUsers())
       }
-},[authState.isTokenThere])
+},[authState?.isTokenThere])
 
 
 if(authState.user){

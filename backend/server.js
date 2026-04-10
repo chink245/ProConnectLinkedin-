@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(postsRoutes);
 app.use(userRoutes);
 
-app.use(express.static("uploads"));
+app.use(express.static("uploads"));    
 
 const start = async () => {
-    const connected = await mongoose.connect("mongodb+srv://chinkyrao06:TIQiXiSydd4Ne87T@cluster0.pilzf6r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    const connected = await mongoose.connect("mongodb+srv://chinky:bubu@cluster0.sl5kkjb.mongodb.net/?appName=Cluster0")
 
     console.log("🔥 MongoDB Connected:", connected.connection.host);
 

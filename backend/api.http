@@ -14,7 +14,7 @@ POST http://localhost:9090/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "email":"Pinku@example.com",
+    "email":"Chinky@example.com",
     "password":"password1"
 }
 
@@ -32,7 +32,7 @@ GET http://localhost:9090/get_user_and_profile
 Content-Type: application/json
 
 {
-  "token":"a6203a1409ae4593d295d0999908eb31eb388cb282536dc05b1651c97de3b90b"
+  "token":"3b4db84b6cf4f10c06b9e2660c66a20ad2cb9e9e4257e64ca918601a5d7912f9"
 }
 
 ###
@@ -48,7 +48,7 @@ POST http://localhost:9090/update_profile_data HTTP/1.1
 Content-Type: application/json
 
 {
-  "token": "b8bd6e0a10fb497fad11959f9d3e1d1bedfa67c5c4bc0696e0fd6fff32d08a2d",
+  "token": "c9563e6c47b04ae554c3d927c234e9370f398535f218f6057ceac20ef2a1ac14",
   "bio": "Some bio text from rahul",
   "currentPost": [
   {
